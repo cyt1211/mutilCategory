@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" href="./css/ace.css">  
+	<style>
+	select[name='category']{
+		margin-top:5px;
+	}
+	</style> 
+</head>
+<body>
+ <form class="form-horizontal" role="form" id="form-banner">
+    <div class="form-group">
+        <label class="col-xs-2 control-label no-padding-right"><span class="red">*</span>所属上级分类： </label>
+        <span class="col-sm-9">
+            <select class="inline" name="category" data-id="1">
+                <option value="-1">请选择分类</option>
+                <option value="0">男装</option>
+                <option value="1">女装</option>
+                <option value="2">童装</option>
+            </select>
+            <span id="select_next_content"></span>
+        </span>
+    </div>
+</form>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./js/mutilCategory.js"></script>
+<script src="./js/loading.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#select_next_content').mutilCategory({
+            categoryUrl: "",
+        });
+    })
+</script>
+</body>
+</html>
